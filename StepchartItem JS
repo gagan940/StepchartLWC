@@ -1,0 +1,18 @@
+import { LightningElement,api } from 'lwc';
+import omniscriptStepChartItems from 'vlocity_cmt/omniscriptStepChartItems'
+import tmpl from './stepchartItem.html';
+import {OmniscriptBaseMixin} from 'vlocity_cmt/omniscriptBaseMixin';
+
+export default class StepchartItem extends OmniscriptBaseMixin (omniscriptStepChartItems){
+
+render(){
+    console.log('from stepchartItem1');
+    console.log('testttt');
+    console.log('inProgress'+this.inProgress);
+    console.log('inProgress'+this.pristine);
+    return tmpl;
+   
+
+} 
+
+}
