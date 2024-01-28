@@ -1,0 +1,22 @@
+import { LightningElement ,api} from 'lwc';
+import omniscriptStepChart from 'vlocity_cmt/omniscriptStepChart';
+import omniscriptStepChartItems from 'vlocity_cmt/omniscriptStepChartItems'
+import {OmniscriptBaseMixin} from 'vlocity_cmt/omniscriptBaseMixin';
+import tmpl from './stepchart123.html';
+
+export default class Stepchart123 extends OmniscriptBaseMixin(omniscriptStepChart,omniscriptStepChartItems )
+
+{
+    isVertical;
+    connectedCallback(){
+        console.log('insidetml'+this.isVertical);
+        this.isVertical=false;
+
+    }
+    render() {
+        console.log('insidetml'+this.isVertical);
+        console.log('testrender');
+        return tmpl;
+    }
+
+}
